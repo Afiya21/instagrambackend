@@ -35,6 +35,8 @@ if(data.error){
 
 }
 else {
+  localStorage.setItem("token",data.token)
+  localStorage.setItem("userinfo",JSON.stringify(data.userinfo))
   M.toast({html: "login successful", classes:"#2e7d32 green darken-3"})
   navigate('/')
 }
